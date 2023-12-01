@@ -28,18 +28,9 @@ let allDigitsComplex (line: string) =
     let addStringToMap (s: string) v m =
       m
       |> Map.add s {|Length = s.Length; Value = v |}
+      |> Map.add (string v) {| Length = 1; Value = v |}
 
     Map.empty
-    |> addStringToMap "1" 1
-    |> addStringToMap "2" 2
-    |> addStringToMap "3" 3
-    |> addStringToMap "4" 4
-    |> addStringToMap "5" 5
-    |> addStringToMap "6" 6
-    |> addStringToMap "7" 7
-    |> addStringToMap "8" 8
-    |> addStringToMap "9" 9
-    |> addStringToMap "0" 0
     |> addStringToMap "one" 1
     |> addStringToMap "two" 2
     |> addStringToMap "three" 3
